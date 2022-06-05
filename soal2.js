@@ -17,14 +17,16 @@ const searchName = (keyWords, amount, callback) => {
 		for (let i = 0; i < amount; i++) {
 			if (nama[getIndex[i]] !== undefined) temp.push(nama[getIndex[i]]);
 		}
-		console.log(temp);
 
-		if (amount > getIndex.length) console.log(`Hasil yang ditemukan hanya ${getIndex.length} nama saja!`);
+		if (amount > getIndex.length) {
+			console.log(temp);
+			console.log(`Hasil yang ditemukan hanya ${getIndex.length} nama saja!`);
+		} else {
+			console.log(temp);
+		}
 	} else {
 		console.log(`Keyword harus string`);
 	}
 };
-
-// console.log(getIndex('an'));
 
 searchName('an', 3, getIndex);
