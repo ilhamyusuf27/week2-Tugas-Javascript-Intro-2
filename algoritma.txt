@@ -1,0 +1,40 @@
+----SOAL 2----
+
+1. Mulai
+2. Inputkan keyWord, amount, dan callback function
+3. Jika keyword bukan berupa string maka akan menampilkan notifikasi bahwa keyword harus string
+4. Jika keyword adalah string maka akan menjalankan proses selanjutnya
+5. Membuat variabel temp berupa array kosong
+6. Membuat variabel getIndex untuk menampung callback function
+7. Didalam callback function kita mendeklarasikan variabel keys berisi array kosong
+8. Selanjutnya ubah isi dari array nama menjadi lower case
+9. Kemudian gunakan method filter untuk mencari data dalam array yang mengandung kata kunci menggunakan method includes
+10. Apabila ditemukan data yang mengandung kata kunci yang dicari, maka push index ke variabel keys
+11. Lalu return keys, dan data tersebut ditampung di variabel getIndex dalam fungsi searchName
+12. Gunakan perulangan untuk menampung data yang ingin ditampilkan sesuai jumlah yang diminta
+13. Apabila variabel nama dengan indeks ke i tidak berisi undefined
+14. Maka push data dari variable nama indeks ke-i ke variable temp
+15. Lalu cetak temp
+16. Apabila data yang ditemukan kurang dari data yang ingin kita tampilkan(amount)
+17. Maka tampilkan notifikasi bahwa data yang ditemukan hanya getIndex.length
+18. Selesai
+
+
+
+----SOAL 3----
+
+1. Mulai
+2. Input nilaiAwal, nilaiAkhir, dan dataArray
+3. Validasi tipe data nilaiAwal, nilaiAkhir, dan dataArray
+4. Jika salah maka akan muncul notifikasi
+5. Jika benar maka akan melanjutkan proses
+6. Jika nilaiAwal < nilaiAkhir dan dataArray.length > 5 maka lanjutkan proses
+7. Jika nilaiAwal > nilaiAkhir, muncul notifikasi nilai Akhir harus lebih besar
+8. jika dataArray.length <= 5, muncul notifikasi angka harus lebih dari 5
+9. mendeklarasikan variabel number untuk temp
+10. Kemudian menggunakan perulangan untuk membandingkan satu persatu nilai
+11. jika nilai dari dataArray indeks ke i lebih besar dari nilaiAwal dan dataArray indeks ke i kurang dari nilai akhir
+12. Jika benar maka push nilai daraArray ke i kedalam variabel number
+13. Jika isi variabel number masih kosong maka muncul notifikasi nilai tidak ditemukan
+14. Kemudian urutkan isi dalam array menggunakan method sort() lalu cetak variabel number
+15. Selesai
