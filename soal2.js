@@ -16,13 +16,8 @@ const searchName = (keyWords, limit, callback) => {
 		for (let i = 0; i < limit; i++) {
 			if (nama[getIndex[i]] !== undefined) temp.push(nama[getIndex[i]]);
 		}
-
-		if (limit > getIndex.length) {
-			console.log(temp);
-			console.log(`Hasil yang ditemukan hanya ${getIndex.length} nama saja!`);
-		} else {
-			console.log(temp);
-		}
+		console.log(temp);
+		console.log(`Hasil yang ditampilkan ${temp.length} nama dari ${getIndex.length} nama yang ditemukan!`);
 	} else {
 		console.log(`Keyword harus string`);
 	}

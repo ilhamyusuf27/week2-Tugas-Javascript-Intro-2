@@ -4,7 +4,7 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
 			const number = [];
 			for (let i = 0; i < dataArray.length; i++) {
 				if (dataArray[i] > nilaiAwal && dataArray[i] < nilaiAkhir) {
-					number.push(dataArray[i]);
+					if (typeof dataArray[i] === 'number') number.push(dataArray[i]);
 				}
 			}
 			if (number.length === 0) {

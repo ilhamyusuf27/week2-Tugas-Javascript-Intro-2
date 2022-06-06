@@ -1,7 +1,7 @@
 // 1. trim();
-// Fungsi ini digunakan untuk menghapus whitespace (spasi) yang ada pada awal dan akhir sebuah string, dan akan mengembalikan string baru.
+// Fungsi ini digunakan untuk menghapus space yang ada pada awal dan akhir sebuah string, dan akan mengembalikan string baru.
 const greeting = '   Hello World     ';
-console.log(greeting.trim());
+// console.log(greeting.trim());
 
 // 2. Math.random();
 // Fungsi ini digunakan untuk mengenerate nilai random, dimana angka yang dikembalikan berupa angka desimal antara 0 hingga 1
@@ -33,7 +33,7 @@ const convertToLower = camp.toLowerCase();
 // console.log(convertToLower);
 
 // 7. sort()
-// Fungsi ini digunakan untuk mengurutkan dari nilai kecil ke besar. Cara kerja fungsi ini yaitu mengubah nilai ke string dan membandingkan urutan nilai utf-16
+// Fungsi ini digunakan untuk mengurutkan dari nilai kecil ke besar.
 const angka2 = [5, 1, 4, 6, 7, 9, 2, 10, 3, 8];
 const urutkan = angka2.sort((a, b) => a - b);
 // console.log(urutkan);
@@ -51,7 +51,7 @@ const filter = angka4.filter((element) => element > 5);
 // console.log(filter);
 
 // 10. include()
-// Fungsi ini digunakan untuk menentukan apakah value array memiliki nilai yang sama dengan entrynya. Fungsi ini mengembalikan nilai true atau false
+// Fungsi ini digunakan untuk menentukan apakah value array memiliki nilai yang sama dengan parameternya. Fungsi ini mengembalikan nilai true atau false
 const nama = ['Abigail', 'Alexandra', 'Alison', 'Amanda'];
 const include = nama.includes('Abigail');
 // console.log(include);
