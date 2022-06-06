@@ -1,16 +1,13 @@
 const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
-	if (typeof nilaiAwal === 'number' && typeof nilaiAkhir === 'number' && Array.isArray(dataArray) === true) {
+	const validation = typeof nilaiAwal === 'number' && typeof nilaiAkhir === 'number' && Array.isArray(dataArray) === true;
+
+	if (validation) {
 		if (nilaiAwal < nilaiAkhir && dataArray.length > 5) {
-			const number = [];
-			for (let i = 0; i < dataArray.length; i++) {
-				if (dataArray[i] > nilaiAwal && dataArray[i] < nilaiAkhir) {
-					if (typeof dataArray[i] === 'number') number.push(dataArray[i]);
-				}
-			}
-			if (number.length === 0) {
-				console.log('nilai tidak ditemukan');
+			const nilai = dataArray.filter((e) => e > nilaiAwal && e < nilaiAkhir && typeof e === 'number');
+			if (nilai.length === 0) {
+				console.log('Nilai tidak ditemukan');
 			} else {
-				console.log(number.sort((a, b) => a - b));
+				console.log(nilai.sort((a, b) => a - b));
 			}
 		} else if (nilaiAwal > nilaiAkhir) {
 			console.log('Nilai akhir harus lebih besar dari nilai awal');
@@ -25,3 +22,6 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
 };
 
 seleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]);
+seleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8]);
+seleksiNilai(5, 17, [2, 25, 4]);
+seleksiNilai(5, 17, [2, 25, 4, 1, 30, 18]);

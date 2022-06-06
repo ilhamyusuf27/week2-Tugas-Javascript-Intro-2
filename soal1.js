@@ -1,6 +1,6 @@
 // 1. trim();
 // Fungsi ini digunakan untuk menghapus space yang ada pada awal dan akhir sebuah string, dan akan mengembalikan string baru.
-const greeting = '   Hello World     ';
+const greeting = '   Good Morning     ';
 // console.log(greeting.trim());
 
 // 2. Math.random();
@@ -9,7 +9,7 @@ const numRandom = Math.random();
 // console.log(numRandom);
 
 // 3. Math.floor();
-// Fungsi ini mengembalikan nilai menjadi bilangan bulat ke bawah
+// Fungsi ini mengkonversi nilai desimal menjadi bilangan bulat ke bawah
 const desimal = Math.random() * 10;
 const pembulatan = Math.floor(desimal);
 // console.log(desimal, pembulatan);
@@ -54,4 +54,4 @@ const filter = angka4.filter((element) => element > 5);
 // Fungsi ini digunakan untuk menentukan apakah value array memiliki nilai yang sama dengan parameternya. Fungsi ini mengembalikan nilai true atau false
 const nama = ['Abigail', 'Alexandra', 'Alison', 'Amanda'];
 const include = nama.includes('Abigail');
-// console.log(include);
+console.log(include);

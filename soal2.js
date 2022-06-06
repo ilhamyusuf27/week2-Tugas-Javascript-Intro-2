@@ -9,15 +9,11 @@ const getIndex = (keyWords) => {
 };
 
 const searchName = (keyWords, limit, callback) => {
-	if (typeof keyWords === 'string') {
-		const temp = [];
-		const getIndex = callback(keyWords);
+	const validation = typeof keyWords === 'string' && typeof limit === 'number';
 
-		for (let i = 0; i < limit; i++) {
-			if (nama[getIndex[i]] !== undefined) temp.push(nama[getIndex[i]]);
-		}
-		console.log(temp);
-		console.log(`Hasil yang ditampilkan ${temp.length} nama dari ${getIndex.length} nama yang ditemukan!`);
+	if (validation) {
+		const getNama = callback(keyWords).map((e) => nama[e]);
+		console.log(getNama.slice(0, limit));
 	} else {
 		console.log(`Keyword harus string`);
 	}
