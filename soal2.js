@@ -2,23 +2,22 @@ const nama = ['Abigail', 'Alexandra', 'Alison', 'Amanda', 'Angela', 'Bella', 'Ca
 
 const getIndex = (keyWords) => {
 	const keys = [];
-	const toLower = nama.map((e) => e.toLowerCase());
-	toLower.filter((e, i) => {
-		if (e.includes(keyWords.toLowerCase())) keys.push(i);
+	nama.filter((e, i) => {
+		if (e.toLowerCase().includes(keyWords.toLowerCase())) keys.push(i);
 	});
 	return keys;
 };
 
-const searchName = (keyWords, amount, callback) => {
+const searchName = (keyWords, limit, callback) => {
 	if (typeof keyWords === 'string') {
 		const temp = [];
 		const getIndex = callback(keyWords);
 
-		for (let i = 0; i < amount; i++) {
+		for (let i = 0; i < limit; i++) {
 			if (nama[getIndex[i]] !== undefined) temp.push(nama[getIndex[i]]);
 		}
 
-		if (amount > getIndex.length) {
+		if (limit > getIndex.length) {
 			console.log(temp);
 			console.log(`Hasil yang ditemukan hanya ${getIndex.length} nama saja!`);
 		} else {

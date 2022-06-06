@@ -24,4 +24,4 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
 	}
 };
 
-seleksiNilai(3, 13, [8, 5, 3, 10, 17, 12]);
+seleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]);
